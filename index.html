@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Navbar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        .container {
+            max-width: 1248px;
+        }
+        .navbar-brand img {
+            height: 30px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-grow: 1;
+        }
+        .search-bar input {
+            flex-grow: 1;
+            border: none;
+            /* border-radius: 50px; */
+            padding: 8px 16px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+        .search-bar select {
+            border: none;
+            /* border-radius: 50px; */
+            padding: 8px 12px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+        .icon-group i {
+            font-size: 20px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container ">
+            <!-- Logo and Menu Icon -->
+           <!-- Navbar with Icon Menu -->
+<a class="navbar-brand d-flex align-items-center" href="#">
+    <img src="https://themewagon.github.io/organic/images/logo.svg" alt="logo"> <!-- Replacing logo with an icon -->
+    <button class="btn btn-light ms-3" type="button" id="hamburger-btn" data-bs-toggle="collapse" data-bs-target="#menu-content" aria-expanded="false" aria-controls="menu-content">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</a>
+
+<!-- Menu Content -->
+<div id="menu-content" class="collapse position-absolute bg-white p-3 rounded shadow-sm" style=" z-index: 1050; top: 60px; max-height: 400px; overflow-y: auto;">
+    <ul class="list-unstyled">
+        <li class="d-flex align-items-center py-2 mb-3">
+            <i class="bi bi-basket2 me-3"></i> Fruits and Vegetables
+        </li>
+        <li class="d-flex align-items-center py-2 mb-3">
+            <i class="bi bi-egg me-3"></i> Dairy and Eggs
+        </li>
+        <li class="d-flex align-items-center py-2 mb-3">
+            <i class="bi bi-shop-window me-3"></i> Meat and Poultry
+        </li>
+        <li class="d-flex align-items-center py-2 mb-3">
+            <i class="bi bi-droplet-half me-3"></i> Seafood
+        </li>
+        <li class="d-flex align-items-center py-2 mb-3">
+            <i class="bi bi-bag-check me-3"></i> Bakery and Bread
+        </li>
+        <li class="d-flex align-items-center py-2 mb-3">
+            <i class="bi bi-box2 me-3"></i> Canned Goods
+        </li>
+        <li class="d-flex align-items-center py-2 mb-3">
+            <i class="bi bi-snow me-3"></i> Frozen Foods
+        </li>
+        <li class="d-flex align-items-center py-2 mb-3">
+            <i class="bi bi-grid me-3"></i> Pasta and Rice
+        </li>
+        <li class="d-flex align-items-center py-2 mb-3">
+            <i class="bi bi-cup-hot me-3"></i> Breakfast Foods
+        </li>
+        <li class="d-flex align-items-center py-2 mb-3">
+            <i class="bi bi-bag-heart me-3"></i> Snacks and Chips
+        </li>
+        <li class="d-flex align-items-center py-2 mb-3">
+            <i class="bi bi-cup-straw me-3"></i> Beverages
+        </li>
+        <li class="d-flex align-items-center py-2 mb-3">
+            <i class="bi bi-palette me-3"></i> Spices and Seasonings
+        </li>
+        <li class="d-flex align-items-center py-2 mb-3">
+            <i class="bi bi-basket2-fill me-3"></i> Baby Food and Formula
+        </li>
+        <li class="d-flex align-items-center py-2 mb-3">
+            <i class="bi bi-heart-pulse me-3"></i> Health and Wellness
+        </li>
+        <li class="d-flex align-items-center py-2 mb-3">
+            <i class="bi bi-house me-3"></i> Household Supplies
+        </li>
+        <li class="d-flex align-items-center py-2 mb-3">
+            <i class="bi bi-person-hearts me-3"></i> Personal Care
+        </li>
+        <li class="d-flex align-items-center py-2 mb-3">
+            <i class="bi bi-paw me-3"></i> Pet Food and Supplies
+        </li>
+    </ul>
+</div>
+
+            <!-- Search Section -->
+            <form class="d-flex search-bar ms-4" style="width: auto;">
+                <div style="display: flex; align-items: center; background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)); border-radius: 50px; overflow: hidden; height: 40px; width: 70%;">
+                    <!-- Removed background color from child elements -->
+                    <select class="form-select" 
+                        style="border: none; background-color: transparent; height: 100%; max-width: 150px;">
+                        <option selected>All Categories</option>
+                        <option value="1">Category 1</option>
+                        <option value="2">Category 2</option>
+                    </select>
+                    <div style="position: relative; width: 545px; flex-grow: 1;  ">
+                        <input type="text" class="form-control" 
+                            placeholder="Search for more than 20,000 products" 
+                            style="padding-right: 40px; border: none; background-color: transparent; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; height: 100%; padding-top: 14px; padding-bottom: 13px; ">
+                        <button class="btn" type="submit" 
+                            style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; padding: 0;">
+                            <img src="search.png" alt="Search Icon" height="16">
+                        </button>
+                    </div>
+                </div>
+            </form>
+            
+            
+            
+            
+
+            <!-- Right Section -->
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">PAGES</a>
+                        <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+                            <li><a class="dropdown-item" href="#">Page 1</a></li>
+                            <li><a class="dropdown-item" href="#">Page 2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- Icons -->
+                <div class="icon-group d-flex">
+                    <i class="bi bi-person"></i>
+                    <i class="bi bi-bookmark"></i>
+                    <i class="bi bi-trash"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- <main></main> -->
+
+
+    <section class="hero-section position-relative">
+        <div class="container fleX ">
+          <div class="row align-items-center">
+            <!-- Left Section -->
+            <div class="col-md-6 " style="padding-top: 5.5rem">
+                <h1 class="display-3 fw-bold text-dark">
+                    <span class="fw-bold text-success">Organic</span>
+                    <span style="font-weight: 100;">Foods at your</span>
+                    <span class="fw-bold">Doorsteps</span>
+                  </h1>
+              <p class="text-muted">Dignissim massa diam elementum.</p>
+              <div class="d-flex gap-3 mt-4">
+                <button class="btn btn-success btn-lg animate-hover">Start Shopping</button>
+                <button class="btn btn-dark btn-lg animate-hover">Join Now</button>
+              </div>
+              <div class="d-flex gap-5 mt-4  text-dark">
+                <div>
+                  <h4 class="mb-0 fs-1 fw-bold lh-sm mb-0">14k+</h4>
+                  <small class="text-muted">Product Varieties</small>
+                </div>
+                <div>
+                  <h4 class="mb-0 fs-1 fw-bold lh-sm mb-0">50k+</h4>
+                  <small class="text-muted">Happy Customers</small>
+                </div>
+                <div>
+                  <h4 class="mb-0 fs-1 fw-bold lh-sm mb-0">10k+</h4>
+                  <small class="text-muted">Store Locations</small>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+            <!-- Right Section -->
+            <!-- <div class="col-md-6">
+              <img src="https://via.placeholder.com/500x300" alt="Basket Image" class="img-fluid" />
+            </div>
+          </div> -->
+      
+          <!-- Features Section -->
+          <div class="container text-center py-4">
+            <div class="row">
+              <!-- First Column -->
+              <div class="col-md-4 d-flex flex-column py-4 align-items-center" style="background-color: #4ad86a;">
+                <div class="d-flex align-items-center w-100">
+                  <i class="bi bi-arrow-repeat text-white fs-1 me-4"></i>
+                  <div class="text-start">
+                    <h4 class="text-white fw-bold mb-2" style="font-size: 1.75rem;">Fresh from farm</h4>
+                    <p class="text-white" style="font-size: 1.2rem;">Lorem ipsum dolor sit amet, consectetur adipis elit.</p>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Second Column -->
+              <div class="col-md-4 d-flex flex-column py-4 align-items-center" style="background-color: #39593f;">
+                <div class="d-flex align-items-center w-100">
+                  <i class="bi bi-tree text-white fs-1 me-4"></i>
+                  <div class="text-start">
+                    <h4 class="text-white fw-bold mb-2" style="font-size: 1.75rem;">100% Organic</h4>
+                    <p class="text-white" style="font-size: 1.2rem;">Lorem ipsum dolor sit amet, consectetur adipis elit.</p>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Third Column -->
+              <div class="col-md-4 d-flex flex-column py-4 align-items-center" style="background-color: #f26b26;">
+                <div class="d-flex align-items-center w-100">
+                  <i class="bi bi-truck text-white fs-1 me-4"></i>
+                  <div class="text-start">
+                    <h4 class="text-white fw-bold mb-2" style="font-size: 1.75rem;">Free delivery</h4>
+                    <p class="text-white" style="font-size: 1.2rem;">Lorem ipsum dolor sit amet, consectetur adipis elit.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          </div>
+          
+          
+        </div>
+
+        </section>
+
+
+        <!-- Include Swiper CSS -->
+<!-- Include Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<section class="py-5 overflow-hidden">
+  <div class="container-lg">
+    <!-- Section Header -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-header d-flex flex-wrap justify-content-between mb-4">
+          <h2 class="section-title fw-bold">Category</h2>
+          <div class="d-flex align-items-center">
+            <a href="#" class="btn btn-success me-3">View All</a>
+            <div class="swiper-buttons">
+              <button
+                class="swiper-prev category-carousel-prev btn btn-light shadow-sm"
+                aria-label="Previous slide"
+              >
+                ❮
+              </button>
+              <button
+                class="swiper-next category-carousel-next btn btn-light shadow-sm"
+                aria-label="Next slide"
+              >
+                ❯
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Swiper Carousel -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="swiper category-carousel">
+          <div class="swiper-wrapper d-flex">
+            <!-- Category Item -->
+            <div class="swiper-slide text-center">
+              <img
+                src="https://themewagon.github.io/organic/images/category-thumb-1.jpg"
+                class="rounded-circle img-fluid mb-2"
+                alt="Fruits & Veges"
+              />
+              <h4 class="fs-6 fw-normal">Fruits & Veges</h4>
+            </div>
+            <div class="swiper-slide text-center">
+              <img
+                src="https://themewagon.github.io/organic/images/category-thumb-2.jpg"
+                class="rounded-circle img-fluid mb-2"
+                alt="Breads & Sweets"
+              />
+              <h4 class="fs-6 fw-normal">Breads & Sweets</h4>
+            </div>
+            <div class="swiper-slide text-center">
+              <img
+                src="https://themewagon.github.io/organic/images/category-thumb-3.jpg"
+                class="rounded-circle img-fluid mb-2"
+                alt="Beverages"
+              />
+              <h4 class="fs-6 fw-normal">Beverages</h4>
+            </div>
+            <div class="swiper-slide text-center">
+              <img
+                src="https://themewagon.github.io/organic/images/category-thumb-4.jpg"
+                class="rounded-circle img-fluid mb-2"
+                alt="Meat Products"
+              />
+              <h4 class="fs-6 fw-normal">Meat Products</h4>
+            </div>
+            <!-- Add more items as needed -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Include Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  // Swiper Initialization
+  const swiper = new Swiper('.category-carousel', {
+    slidesPerView: 4, // Number of visible slides
+    spaceBetween: 30, // Space between slides
+    navigation: {
+      nextEl: '.category-carousel-next',
+      prevEl: '.category-carousel-prev',
+    },
+    breakpoints: {
+      // Responsive breakpoints
+      768: { slidesPerView: 3 },
+      576: { slidesPerView: 2 },
+      320: { slidesPerView: 1 },
+    },
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       <style>
+          .hero-section{
+            background-image: url('https://themewagon.github.io/organic/images/banner-1.jpg');
+            background-size: cover;
+            /* background-position: center; */
+            /* transform: scale(0.67); Adjust this for zoom level */
+            color: #fff;
+          }
+
+          
+      
+          .animate-hover:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+          }
+      
+          .card {
+            border: none;
+          }
+
+          .fleX{
+            padding-left: 8vw;
+          }
+        </style>
+
+
+
+
+     <!-- // section 03  -->
+
+
+   
+    
+
+<!-- Bootstrap 5 and Icons CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+<!-- Optional: Smooth Hover Transition Script -->
+<script>
+  document.querySelectorAll('.product-item').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      item.querySelector('.button-area').classList.remove('opacity-0');
+      item.querySelector('.button-area').classList.add('opacity-100');
+      item.querySelector('.tab-image').classList.add('scale-90'); // Shrinks the image
+      item.querySelector('.product-item').classList.add('bg-hover'); // Adds hover background
+    });
+    item.addEventListener('mouseleave', () => {
+      item.querySelector('.button-area').classList.remove('opacity-100');
+      item.querySelector('.button-area').classList.add('opacity-0');
+      item.querySelector('.tab-image').classList.remove('scale-90'); // Resets image size
+      item.querySelector('.product-item').classList.remove('bg-hover'); // Removes hover background
+    });
+  });
+</script>
+
+<!-- Optional CSS for Hover Background -->
+<style>
+  .product-item.bg-hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Light background color on hover */
+  }
+  .product-item .button-area {
+    transition: opacity 0.3s ease;
+  }
+  .product-item .tab-image {
+    transition: transform 0.3s ease;
+  }
+</style>
+
+    
+    <!-- Bootstrap 5 and Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    
+    <!-- Optional: Smooth Hover Transition Script -->
+    <script>
+      document.querySelectorAll('.product-item').forEach(item => {
+        item.addEventListener('mouseenter', () => {
+          item.querySelector('.button-area').classList.remove('opacity-0');
+          item.querySelector('.button-area').classList.add('opacity-100');
+          item.querySelector('.tab-image').classList.add('scale-90');
+        });
+        item.addEventListener('mouseleave', () => {
+          item.querySelector('.button-area').classList.remove('opacity-100');
+          item.querySelector('.button-area').classList.add('opacity-0');
+          item.querySelector('.tab-image').classList.remove('scale-90');
+        });
+      });
+    </script>
+
+
+
+
+
+  <!-- section 03 -->
+
+
+  <section class="pb-5">
+    <div class="container-lg">
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="section-header d-flex flex-wrap justify-content-between my-4">
+            
+            <h2 class="section-title">Best selling products</h2>
+
+            <div class="d-flex align-items-center">
+              <a href="#" class="btn btn-success rounded-1 btn-sm">View All</a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="product-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5">
+                
+            <div class="col">
+              <div class="product-item">
+                <figure>
+                  <a href="index.html" title="Product Title">
+                    <img src="https://themewagon.github.io/organic/images/product-thumb-1.png"alt="Product Thumbnail" class="tab-image " style="padding-left: 59px;">
+                  </a>
+                </figure>
+                <div class="d-flex flex-column text-center">
+                  <h3 class="fs-6 fw-normal">Whole Wheat Sandwich Bread</h3>
+                  <div>
+                    <i class="bi bi-star-fill text-warning small"></i>
+                    <i class="bi bi-star-fill text-warning small"></i>
+                    <i class="bi bi-star-fill text-warning small"></i>
+                    <i class="bi bi-star-fill text-warning small"></i>
+                    <span>(222)</span>
+                  </div>
+                  <div class="d-flex justify-content-center align-items-center gap-2">
+                    <del>$24.00</del>
+                    <span class="text-dark fw-semibold">$18.00</span>
+                    <span class="badge border border-dark-subtle rounded-0 fw-normal px-1 fs-7 lh-1 text-body-tertiary">10% OFF</span>
+                  </div>
+                  <div class="button-area p-3 pt-0">
+                    <div class="row g-1 mt-2">
+                      <div class="col-3"><input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1"></div>
+                      <div class="col-7"><a href="#" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart bg-success" style="background-color:#198754;"><i class="bi bi-cart"></i> Add to Cart</a></div>
+                      <div class="col-2"><a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6"><i class="bi bi-heart"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="product-item">
+                <figure>
+                  <a href="index.html" title="Product Title">
+                    <img src="https://themewagon.github.io/organic/images/product-thumb-2.png" alt="Product Thumbnail" class="tab-image">
+                  </a>
+                </figure>
+                <div class="d-flex flex-column text-center">
+                  <h3 class="fs-6 fw-normal">Whole Grain Oatmeal</h3>
+                  <div>
+                    <span class="rating">
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                    <span>(41)</span>
+                  </div>
+                  <div class="d-flex justify-content-center align-items-center gap-2">
+                    <del>$54.00</del>
+                    <span class="text-dark fw-semibold">$50.00</span>
+                    <span class="badge border border-dark-subtle rounded-0 fw-normal px-1 fs-7 lh-1 text-body-tertiary">10% OFF</span>
+                  </div>
+                  <div class="button-area p-3 pt-0">
+                    <div class="row g-1 mt-2">
+                      <div class="col-3"><input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1"></div>
+                      <div class="col-7"><a href="#" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart bg-success" style="background-color:#198754;"><i class="bi bi-cart"></i> Add to Cart</a></div>
+                      <div class="col-2"><a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6"> <i class="bi bi-heart"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="product-item">
+                <figure>
+                  <a href="index.html" title="Product Title">
+                    <img src="https://themewagon.github.io/organic/images/product-thumb-3.png"  alt="Product Thumbnail" class="tab-image">
+                  </a>
+                </figure>
+                <div class="d-flex flex-column text-center">
+                  <h3 class="fs-6 fw-normal">Sharp Cheddar Cheese Block</h3>
+                  <div>
+                    <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                    <span>(32)</span>
+                  </div>
+                  <div class="d-flex justify-content-center align-items-center gap-2">
+                    <del>$14.00</del>
+                    <span class="text-dark fw-semibold">$12.00</span>
+                    <span class="badge border border-dark-subtle rounded-0 fw-normal px-1 fs-7 lh-1 text-body-tertiary">10% OFF</span>
+                  </div>
+                  <div class="button-area p-3 pt-0">
+                    <div class="row g-1 mt-2">
+                      <div class="col-3"><input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1"></div>
+                      <div class="col-7"><a href="#" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart bg-success" style="background-color:#198754;"><i class="bi bi-cart"></i> Add to Cart</a></div>
+                      <div class="col-2"><a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6"><i class="bi bi-heart"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="product-item" style=" display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;">
+                <figure>
+                  <a href="index.html" title="Product Title">
+                    <img src="https://themewagon.github.io/organic/images/product-thumb-4.png" alt="Product Thumbnail" class="tab-image" style="padding-bottom: 63px;">
+                  </a>
+                </figure>
+                <div class="d-flex flex-column text-center">
+                  <h3 class="fs-6 fw-normal">Organic Baby Spinach</h3>
+                  <div>
+                    <i class="bi bi-star-fill text-warning middle"></i>
+                    <i class="bi bi-star-fill text-warning middle"></i>
+                    <i class="bi bi-star-fill text-warning middle"></i>
+                    <i class="bi bi-star-fill text-warning middle"></i>
+                    <i class="bi bi-star-fill text-warning middle"></i>
+                    <span>(222)</span>
+                  </div>
+                  <div class="d-flex justify-content-center align-items-center gap-2">
+                    <del>$24.00</del>
+                    <span class="text-dark fw-semibold">$18.00</span>
+                    <span class="badge border border-dark-subtle rounded-0 fw-normal px-1 fs-7 lh-1 text-body-tertiary">10% OFF</span>
+                  </div>
+                  <div class="button-area p-3 pt-0">
+                    <div class="row g-1 mt-2">
+                      <div class="col-3"><input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1"></div>
+                      <div class="col-7"><a href="#" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart bg-success" style="background-color:#198754;"> <i class="bi bi-cart"></i> Add to Card</a></div>
+                      <div class="col-2"><a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6"> <i class="bi bi-heart"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col">
+              <div class="product-item">
+                <figure>
+                  <a href="index.html" title="Product Title">
+                    <img src="https://themewagon.github.io/organic/images/product-thumb-5.png" alt="Product Thumbnail" class="tab-image">
+                  </a>
+                </figure>
+                <div class="d-flex flex-column text-center">
+                  <h3 class="fs-6 fw-normal">Organic Spinach Leaves (Fresh Produce)</h3>
+                  <div>
+                    <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                    <span>(222)</span>
+                  </div>
+                  <div class="d-flex justify-content-center align-items-center gap-2">
+                    <del>$24.00</del>
+                    <span class="text-dark fw-semibold">$18.00</span>
+                    <span class="badge border border-dark-subtle rounded-0 fw-normal px-1 fs-7 lh-1 text-body-tertiary">10% OFF</span>
+                  </div>
+                  <div class="button-area p-3 pt-0">
+                    <div class="row g-1 mt-2">
+                      <div class="col-3"><input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1"></div>
+                      <div class="col-7"><a href="#" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart bg-success"style="background-color:#198754;"><i class="bi bi-cart bg-success" style="background-color:#198754;"></i> Add to Cart</a></div>
+                      <div class="col-2"><a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6"> <i class="bi bi-heart"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col">
+              <div class="product-item">
+                <figure>
+                  <a href="index.html" title="Product Title">
+                    <img src="https://themewagon.github.io/organic/images/product-thumb-6.png" alt="Product Thumbnail" class="tab-image">
+                  </a>
+                </figure>
+                <div class="d-flex flex-column text-center">
+                  <h3 class="fs-6 fw-normal">Fresh Salmon</h3>
+                  <div>
+                    <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                    <span>(222)</span>
+                  </div>
+                  <div class="d-flex justify-content-center align-items-center gap-2">
+                    <del>$24.00</del>
+                    <span class="text-dark fw-semibold">$18.00</span>
+                    <span class="badge border border-dark-subtle rounded-0 fw-normal px-1 fs-7 lh-1 text-body-tertiary">10% OFF</span>
+                  </div>
+                  <div class="button-area p-3 pt-0">
+                    <div class="row g-1 mt-2">
+                      <div class="col-3"><input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1"></div>
+                      <div class="col-7"><a href="#" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart bg-success"style="background-color:#198754;"> <i class="bi bi-cart bg-success" style="background-color:#198754;"></i> Add to Cart</a></div>
+                      <div class="col-2"><a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6"><i class="bi bi-heart"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col">
+              <div class="product-item">
+                <figure>
+                  <a href="index.html" title="Product Title">
+                    <img src="https://themewagon.github.io/organic/images/product-thumb-7.png" alt="Product Thumbnail" class="tab-image">
+                  </a>
+                </figure>
+                <div class="d-flex flex-column text-center">
+                  <h3 class="fs-6 fw-normal">Imported Italian Spaghetti Pasta</h3>
+                  <div>
+                    <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                    <span>(222)</span>
+                  </div>
+                  <div class="d-flex justify-content-center align-items-center gap-2">
+                    <del>$24.00</del>
+                    <span class="text-dark fw-semibold">$18.00</span>
+                    <span class="badge border border-dark-subtle rounded-0 fw-normal px-1 fs-7 lh-1 text-body-tertiary">10% OFF</span>
+                  </div>
+                  <div class="button-area p-3 pt-0">
+                    <div class="row g-1 mt-2">
+                      <div class="col-3"><input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1"></div>
+                      <div class="col-7"><a href="#" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart bg-success" style="background-color:#198754;"> <i class="bi bi-cart"></i> Add to Cart</a></div>
+                      <div class="col-2"><a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6"><i class="bi bi-heart"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col">
+              <div class="product-item">
+                <figure>
+                  <a href="index.html" title="Product Title">
+                    <img src="https://themewagon.github.io/organic/images/product-thumb-8.png" alt="Product Thumbnail" class="tab-image" style="padding-left: 53px;">
+                  </a>
+                </figure>
+                <div class="d-flex flex-column text-center">
+                  <h3 class="fs-6 fw-normal">Granny Smith Apples</h3>
+                  <div>
+                    <span class="rating">
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                    </span>
+                    <span>(222)</span>
+                  </div>
+                  <div class="d-flex justify-content-center align-items-center gap-2">
+                    <del>$24.00</del>
+                    <span class="text-dark fw-semibold">$18.00</span>
+                    <span class="badge border border-dark-subtle rounded-0 fw-normal px-1 fs-7 lh-1 text-body-tertiary">10% OFF</span>
+                  </div>
+                  <div class="button-area p-3 pt-0">
+                    <div class="row g-1 mt-2">
+                      <div class="col-3"><input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1"></div>
+                      <div class="col-7"><a href="#" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart bg-success" style="background-color: #198754;"><i class="bi bi-cart"></i> Add to Cart</a></div>
+                      <div class="col-2"><a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6"><i class="bi bi-heart"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col">
+              <div class="product-item">
+                <figure>
+                  <a href="index.html" title="Product Title">
+                    <img src="https://themewagon.github.io/organic/images/product-thumb-9.png" alt="Product Thumbnail" class="tab-image">
+                  </a>
+                </figure>
+                <div class="d-flex flex-column text-center">
+                  <h3 class="fs-6 fw-normal">Organic 2% Reduced Fat Milk </h3>
+                  <div>
+                    <span class="rating">
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                    </span>
+                    <span>(222)</span>
+                  </div>
+                  <div class="d-flex justify-content-center align-items-center gap-2">
+                    <del>$24.00</del>
+                    <span class="text-dark fw-semibold">$18.00</span>
+                    <span class="badge border border-dark-subtle rounded-0 fw-normal px-1 fs-7 lh-1 text-body-tertiary">10% OFF</span>
+                  </div>
+                  <div class="button-area p-3 pt-0">
+                    <div class="row g-1 mt-2">
+                      <div class="col-3"><input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1"></div>
+                      <div class="col-7"><a href="#" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart bg-success" style="background-color:#198754;"> <i class="bi bi-cart"></i> Add to Cart</a></div>
+                      <div class="col-2"><a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6"><i class="bi bi-heart"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="product-item">
+                <figure>
+                  <a href="index.html" title="Product Title">
+                    <img src="https://themewagon.github.io/organic/images/product-thumb-10.png" alt="Product Thumbnail" class="tab-image">
+                  </a>
+                </figure>
+                <div class="d-flex flex-column text-center">
+                  <h3 class="fs-6 fw-normal">Greek Style Plain Yogurt</h3>
+                  <div>
+                    <span class="rating">
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                      <i class="bi bi-star-fill text-warning middle"></i>
+                    </span>
+                    <span>(222)</span>
+                  </div>
+                  <div class="d-flex justify-content-center align-items-center gap-2">
+                    <del>$24.00</del>
+                    <span class="text-dark fw-semibold">$18.00</span>
+                    <span class="badge border border-dark-subtle rounded-0 fw-normal px-1 fs-7 lh-1 text-body-tertiary">10% OFF</span>
+                  </div>
+                  <div class="button-area p-3 pt-0">
+                    <div class="row g-1 mt-2">
+                      <div class="col-3"><input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1"></div>
+                      <div class="col-7"><a href="#" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart bg-success" style="background-color:#198754;"><i class="bi bi-cart"></i> Add to Cart</a></div>
+                      <div class="col-2"><a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6"><i class="bi bi-heart"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+
+
+
+          <!-- / product-grid -->
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </section>
+
+
+
+  <section class="py-3">
+    <div class="container-lg">
+      <div class="row">
+        <!-- Large Banner -->
+        <div class="col-12 mb-3">
+          <div class="banner-ad position-relative bg-info text-light d-flex align-items-center p-5" 
+               style="background: url('https://themewagon.github.io/organic/images/banner-ad-1.jpg') no-repeat center center; background-size: cover; height: 300px;">
+            <div class="position-absolute top-0 start-0 w-100 h-100 p-5 d-flex flex-column justify-content-start">
+              <h3 class="fs-2 fw-bold">Items on SALE</h3>
+              <p>Discounts up to 30%</p>
+              <a href="#" class="btn  text-white text-start ms-0 shop-now-btn">Shop Now</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Smaller Banners -->
+        <div class="col-md-6 mb-3">
+          <div class="banner-ad position-relative bg-success text-light d-flex align-items-center p-5" 
+               style="background: url('https://themewagon.github.io/organic/images/banner-ad-2.jpg') no-repeat center center; background-size: cover; height: 200px;">
+            <div class="position-absolute top-0 start-0 w-100 h-100 p-5 d-flex flex-column justify-content-start">
+              <h3 class="fs-4 fw-bold">Combo Offers</h3>
+              <p>Discounts up to 50%</p>
+              <a href="#" class="btn  text-white text-start ms-0 shop-now-btn">Shop Now</a>
+              
+             </div>
+          </div>
+        </div>
+  
+        <div class="col-md-6 mb-3">
+          <div class="banner-ad position-relative bg-danger text-light d-flex align-items-center p-5" 
+               style="background: url('https://themewagon.github.io/organic/images/banner-ad-3.jpg') no-repeat center center; background-size: cover; height: 200px;">
+            <div class="position-absolute top-0 start-0 w-100 h-100 p-5 d-flex flex-column justify-content-start">
+              <h3 class="fs-4 fw-bold">Discount Coupons</h3>
+              <p>Discounts up to 40%</p>
+              <a href="#" class="btn  text-white text-start ms-0 shop-now-btn">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="latest-blog" class="pb-4">
+    <div class="container-lg">
+      <div class="row">
+        <div class="section-header d-flex align-items-center justify-content-between my-4">
+          <h2 class="section-title">Our Recent Blog</h2>
+          <a href="#" class="btn btn-success me-3">View All</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <article class="post-item card border-0 shadow-sm p-3">
+            <div class="image-holder zoom-effect">
+              <a href="#">
+                <img src="https://themewagon.github.io/organic/images/post-thumbnail-1.jpg" alt="post" class="card-img-top">
+              </a>
+            </div>
+            <div class="card-body">
+              <div class="post-meta d-flex text-uppercase gap-3 my-2 align-items-center">
+                <div class="meta-date"><svg width="16" height="16"><use xlink:href="#calendar"></use></svg>22 Aug 2021</div>
+                <div class="meta-categories"><svg width="16" height="16"><use xlink:href="#category"></use></svg>tips &amp; tricks</div>
+              </div>
+              <div class="post-header">
+                <h3 class="post-title">
+                  <a href="#" class="text-decoration-none text-muted link-dark">Top 10 casual look ideas to dress up your kids</a>
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...</p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="post-item card border-0 shadow-sm p-3">
+            <div class="image-holder zoom-effect">
+              <a href="#">
+                <img src="https://themewagon.github.io/organic/images/post-thumbnail-2.jpg" alt="post" class="card-img-top">
+              </a>
+            </div>
+            <div class="card-body">
+              <div class="post-meta d-flex text-uppercase gap-3 my-2 align-items-center">
+                <div class="meta-date"><svg width="16" height="16"><use xlink:href="#calendar"></use></svg>25 Aug 2021</div>
+                <div class="meta-categories"><svg width="16" height="16"><use xlink:href="#category"></use></svg>trending</div>
+              </div>
+              <div class="post-header">
+                <h3 class="post-title">
+                  <a href="#" class="text-decoration-none text-muted link-dark">Latest trends of wearing street wears supremely</a>
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...</p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="post-item card border-0 shadow-sm p-3">
+            <div class="image-holder zoom-effect">
+              <a href="#">
+                <img src="https://themewagon.github.io/organic/images/post-thumbnail-3.jpg" alt="post" class="card-img-top">
+              </a>
+            </div>
+            <div class="card-body">
+              <div class="post-meta d-flex text-uppercase gap-3 my-2 align-items-center">
+                <div class="meta-date"><svg width="16" height="16"><use xlink:href="#calendar"></use></svg>28 Aug 2021</div>
+                <div class="meta-categories"><svg width="16" height="16"><use xlink:href="#category"></use></svg>inspiration</div>
+              </div>
+              <div class="post-header">
+                <h3 class="post-title">
+                  <a href="#" class="text-decoration-none text-muted link-dark">10 Different Types of comfortable clothes ideas for women</a>
+
+
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="pb-4 my-4">
+    <div class="container-lg">
+
+      <div class="bg-warning pt-5 rounded-5">
+        <div class="container">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-md-4">
+              <h2 class="mt-5">Download Organic App</h2>
+              <p>Online Orders made easy, fast and reliable</p>
+              <div class="d-flex gap-2 flex-wrap mb-5">
+                <a href="#" title="App store"><img src="https://themewagon.github.io/organic/images/img-app-store.png" alt="app-store"></a>
+                <a href="#" title="Google Play"><img src="https://themewagon.github.io/organic/images/img-google-play.png" alt="google-play"></a>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <img src="https://themewagon.github.io/organic/images/banner-onlineapp.png" alt="phone" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+
+
+  <div class="container-lg">
+    <h2 class="my-4">People are also looking for</h2>
+
+    <a href="#" class="btn btn-warning me-2 mb-2 hover-darken" style="background-color: #ff07071a;">Blue diamon almonds</a>
+    <a href="#" class="btn btn-warning me-2 mb-2" style="background-color: #ff07071a;">Blue diamon almonds</a>
+    <a href="#" class="btn btn-warning me-2 mb-2" style="background-color: #ff07071a;">Angie’s Boomchickapop Corn</a>
+    <a href="#" class="btn btn-warning me-2 mb-2" style="background-color: #ff07071a;">Salty kettle Corn</a>
+    <a href="#" class="btn btn-warning me-2 mb-2" style="background-color: #ff07071a;">Chobani Greek Yogurt</a>
+    <a href="#" class="btn btn-warning me-2 mb-2" style="background-color: #ff07071a;">Sweet Vanilla Yogurt</a>
+    <a href="#" class="btn btn-warning me-2 mb-2" style="background-color: #ff07071a;">Foster Farms Takeout Crispy wings</a>
+    <a href="#" class="btn btn-warning me-2 mb-2" style="background-color: #ff07071a;">Warrior Blend Organic</a>
+    <a href="#" class="btn btn-warning me-2 mb-2" style="background-color: #ff07071a;">Chao Cheese Creamy</a>
+    <a href="#" class="btn btn-warning me-2 mb-2" style="background-color: #ff07071a;">Chicken meatballs</a>
+    <a href="#" class="btn btn-warning me-2 mb-2" style="background-color: #ff07071a;">Blue diamon almonds</a>
+    <a href="#" class="btn btn-warning me-2 mb-2" style="background-color: #ff07071a;">Angie’s Boomchickapop Corn</a>
+    <a href="#" class="btn btn-warning me-2 mb-2" style="background-color: #ff07071a;">Salty kettle Corn</a>
+    <a href="#" class="btn btn-warning me-2 mb-2" style="background-color: #ff07071a;">Chobani Greek Yogurt</a>
+    <a href="#" class="btn btn-warning me-2 mb-2" style="background-color: #ff07071a;">Sweet Vanilla Yogurt</a>
+    <a href="#" class="btn btn-warning me-2 mb-2" style="background-color: #ff07071a;">Foster Farms Takeout Crispy wings</a>
+    <a href="#" class="btn btn-warning me-2 mb-2" style="background-color: #ff07071a;">Warrior Blend Organic</a>
+    <a href="#" class="btn btn-warning me-2 mb-2" style="background-color: #ff07071a;">Chao Cheese Creamy</a>
+    <a href="#" class="btn btn-warning me-2 mb-2" style="background-color: #ff07071a;">Chicken meatballs</a>
+  </div>
+
+
+
+
+
+  <section class="py-5">
+    <div class="container-lg">
+      <div class="row row-cols-1 row-cols-sm-3 row-cols-lg-5">
+        <div class="col">
+          <div class="card mb-3 border border-dark-subtle p-3">
+            <div class="text-dark mb-3">
+              <svg width="32" height="32"><use xlink:href="#package"></use></svg>
+            </div>
+            <div class="card-body p-0">
+              <h5>Free delivery</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-3 border border-dark-subtle p-3">
+            <div class="text-dark mb-3">
+              <svg width="32" height="32"><use xlink:href="#secure"></use></svg>
+            </div>
+            <div class="card-body p-0">
+              <h5>100% secure payment</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-3 border border-dark-subtle p-3">
+            <div class="text-dark mb-3">
+              <svg width="32" height="32"><use xlink:href="#quality"></use></svg>
+            </div>
+            <div class="card-body p-0">
+              <h5>Quality guarantee</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-3 border border-dark-subtle p-3">
+            <div class="text-dark mb-3">
+              <svg width="32" height="32"><use xlink:href="#savings"></use></svg>
+            </div>
+            <div class="card-body p-0">
+              <h5>guaranteed savings</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-3 border border-dark-subtle p-3">
+            <div class="text-dark mb-3">
+              <svg width="32" height="32"><use xlink:href="#offers"></use></svg>
+            </div>
+            <div class="card-body p-0">
+              <h5>Daily offers</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <footer class="py-5">
+    <div class="container-lg">
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="footer-menu">
+            <img src="https://themewagon.github.io/organic/images/logo.svg" width="240" height="70" alt="logo">
+            <div class="social-links mt-3">
+              <ul class="d-flex list-unstyled gap-5">
+                <li>
+                  <a href="#" class="text-decoration-none">
+                    <i class="bi bi-facebook text-primary fs-5"></i>
+                  </a>
+                  
+                  <style>
+                    a:hover .bi-facebook {
+                      color: darkblue; /* Changes color on hover */
+                    }
+                  </style>
+                  
+                </li>
+                <li>
+                  <a href="#" class="text-decoration-none">
+                    <i class="bi bi-twitter text-info fs-5"></i>
+                  </a>
+                  
+                  <style>
+                    a:hover .bi-twitter {
+                      color: deepskyblue; /* Changes color on hover */
+                    }
+                  </style>
+                  
+                </li>
+                <li>
+                  <a href="#" class="text-decoration-none">
+                    <i class="bi bi-youtube text-danger fs-5"></i>
+                  </a>
+                  
+                  <style>
+
+
+                    a:hover .bi-youtube {
+                      color: darkred; /* Changes color to dark red on hover */
+                    }
+                  </style>
+                  
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-decoration-none">
+                    <i class="bi bi-instagram text-secondary fs-5"></i>
+                  </a>
+                  
+                  <style>
+                    a:hover .bi-instagram {
+                      color: #e4405f; /* Instagram's pinkish-red brand color */
+                    }
+                  </style>
+                  
+                </li>
+                <li>
+                  <a href="#" class="btn btn-outline-light">
+                    <svg width="16" height="16"><use xlink:href="#amazon"></use></svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 col-sm-6">
+          <div class="footer-menu">
+            <h5 class="widget-title">Organic</h5>
+            <ul class="menu-list list-unstyled">
+              <li class="menu-item">
+                <a href="#" class="nav-link">About us</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Conditions </a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Our Journals</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Careers</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Affiliate Programme</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Ultras Press</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-6">
+          <div class="footer-menu">
+            <h5 class="widget-title">Quick Links</h5>
+            <ul class="menu-list list-unstyled">
+              <li class="menu-item">
+                <a href="#" class="nav-link">Offers</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Discount Coupons</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Stores</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Track Order</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Shop</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Info</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-6">
+          <div class="footer-menu">
+            <h5 class="widget-title">Customer Service</h5>
+            <ul class="menu-list list-unstyled">
+              <li class="menu-item">
+                <a href="#" class="nav-link">FAQ</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Contact</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Privacy Policy</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Returns &amp; Refunds</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Cookie Guidelines</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Delivery Information</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="footer-menu">
+            <h5 class="widget-title">Subscribe Us</h5>
+            <p>Subscribe to our newsletter to get updates about our grand offers.</p>
+            <form class="d-flex mt-3 gap-0" action="index.html">
+              <input class="form-control rounded-start rounded-0 bg-light" type="email" placeholder="Email Address" aria-label="Email Address">
+              <button class="btn btn-dark rounded-end rounded-0" type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </footer>
+  
+
+  <!-- javaScript -->
+
+  <script>
+    document.querySelectorAll('.product-item').forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        item.querySelector('.button-area').classList.remove('opacity-0');
+        item.querySelector('.button-area').classList.add('opacity-100');
+        item.querySelector('.tab-image').classList.add('scale-90'); // Shrinks the image
+        item.querySelector('.product-item').classList.add('bg-hover'); // Adds hover background
+      });
+      item.addEventListener('mouseleave', () => {
+        item.querySelector('.button-area').classList.remove('opacity-100');
+        item.querySelector('.button-area').classList.add('opacity-0');
+        item.querySelector('.tab-image').classList.remove('scale-90'); // Resets image size
+        item.querySelector('.product-item').classList.remove('bg-hover'); // Removes hover background
+      });
+    });
+
+    
+
+    function checkMobileDevice() {
+      const popupMessage = document.getElementById('popupMessage');
+      if (window.innerWidth < 768) {
+        popupMessage.style.display = 'block';  // Show the pop-up
+      }
+    }
+
+    // Close the pop-up message
+    function closePopup() {
+      const popupMessage = document.getElementById('popupMessage');
+      popupMessage.style.display = 'none';  // Hide the pop-up
+    }
+
+    // Call the checkMobileDevice function when the page loads
+    window.onload = checkMobileDevice;
+  
+
+  </script>
+
+<div id="popupMessage" class="alert alert-warning">
+  Please open this website on a laptop or computer for the best experience.
+  <button type="button" class="btn-close" onclick="closePopup()"></button>
+</div>
+  
+
+  <!-- Normal Css -->
+  <!-- Optional CSS for Hover Background -->
+  <style>
+    .product-item.bg-hover {
+      background-color: rgba(0, 0, 0, 0.1); /* Light background color on hover */
+    }
+    .product-item .button-area {
+      transition: opacity 0.3s ease;
+    }
+    .product-item .tab-image {
+      transition: transform 0.3s ease;
+    }
+  </style>
+ 
+    
+    
+       
+    
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</body>
+</html>

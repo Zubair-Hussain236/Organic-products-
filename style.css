@@ -1,0 +1,77 @@
+.input-group .form-control {
+            border-radius: 0.5rem 0 0 0.5rem;
+}
+.input-group-text {
+   background: #fff;
+            border: 1px solid #ced4da;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .input-group-text img {
+            width: 16px;
+            height: 16px;
+        }
+
+
+
+.tab-image {     
+     padding-left :59px;
+}
+
+
+.product-item figure > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.shop-now-btn {
+  position: relative;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  
+}
+
+.shop-now-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white; /* Underline color */
+  transition: all 0.4s ease-in-out;
+}
+
+  .shop-now-btn:hover {
+    color: white;
+    transition: color 0.3s ease-in-out;
+  }
+
+ 
+
+
+
+
+  .shop-now-btn:hover::after {
+    width: 15%; /* Animation covers the entire button text */
+  }
+
+
+  
+    /* Style for the pop-up */
+    #popupMessage {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      display: none; /* Hidden by default */
+      z-index: 9999;
+    }
+ 
+
